@@ -1,0 +1,9 @@
+[project]
+name = "smtp-notifier"
+version = "0.1.0"
+description = "An implementation of a simple smtp notifications client that can be used with web servers, services, and even scripts"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pydantic>=2.13.5",
+]
