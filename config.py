@@ -1,10 +1,11 @@
+from pydantic import SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_file='.env')
+    model_config = SettingsConfigDict(env_file='.env', env_prefix='SMTP_')
 
     account_email: str
-    account_password: str
+    account_password: SecretStr
 
     target_email: str
 
