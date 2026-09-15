@@ -1,7 +1,7 @@
 from datetime import datetime
 from html import escape
 
-SENDER = "Ahmad Waseem's Script"
+SENDER = "Ahmad Waseem's Worker 🤖"
 
 SUBJECT = "SMTP Notification Email 📨"
 
@@ -17,13 +17,12 @@ def build_bodies(status: str) -> tuple[str, str]:
     </p>
 
     <p style="margin: 0 0 12px 0; line-height: 1.5;">
-      This text will have information on whether your script has completed
-      or an event has occurred on your server.
+      The worker is healthy and operational.
     </p>
 
     <p style="margin: 0 0 12px 0; line-height: 1.5;">
       Status: <b>{escape(status)}</b><br>
-      Last check-in: <b>{checked_in}</b>
+      Timestamp: <b>{checked_in}</b>
     </p>
 
     <p style="margin: 16px 0 0 0; font-size: 12px; color: #777777;">
@@ -40,7 +39,7 @@ This text will have information on whether your script has completed
 or an event has occurred on your server.
 
 Status: {status}
-Last check-in: {checked_in}
+Timestamp: {checked_in}
 
 Sent automatically. No reply needed.
 """
